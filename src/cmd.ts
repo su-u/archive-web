@@ -4,10 +4,12 @@ import * as fs from "fs-extra";
 import * as path from "path";
 import { EventEmitter } from "events";
 import { WaitForAll } from "ewait";
+// @ts-ignore
 import scrape from "website-scraper";
+// @ts-ignore
 import moment from "moment";
 
-var launch = function(args) {
+export const launch = function(args) {
   var tmpDirPath = null;
   var parentPath = null;
   var emitter = new EventEmitter();
@@ -102,5 +104,3 @@ var launch = function(args) {
     }
   );
 };
-
-exports.launch = launch;

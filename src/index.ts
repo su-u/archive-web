@@ -47,8 +47,8 @@ Examples:\n\
         Use UTC time. Timestamp extended to milliseconds, so e.g.: 20191021153025478\n\
 \n ";
 
-import * as docopt from "docopt";
-import * as _cmd from "./cmd";
+import docopt from "docopt";
+import { launch } from "./cmd";
 
 var kwargs = {
   name: "archive-web",
@@ -56,7 +56,7 @@ var kwargs = {
 };
 
 function main(args) {
-  _cmd.launch(args);
+  launch(args);
 }
 
 function error(err) {
